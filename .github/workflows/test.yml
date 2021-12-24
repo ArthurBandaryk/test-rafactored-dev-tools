@@ -16,9 +16,6 @@ jobs:
         with:
           submodules: 'true'
 
-      #- name: Initialize and update submodule
-      #  run: git submodule init && git submodule update 
-
       # Call the composite action to check files
       # for correct code style. This action (action.yml)
       # is in `3rdparty/dev-tools/check-code-style` submodule's
