@@ -1,0 +1,26 @@
+name: Check Code Style
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - "main" 
+
+jobs:
+  check_code_style:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: 'true'
+
+      #- name: Initialize and update submodule
+      #  run: git submodule init && git submodule update 
+
+      # Call the composite action to check files
+      # for correct code style. This action (action.yml)
+      # is in `3rdparty/dev-tools/check-code-style` submodule's
+      # directory.
+      - uses: ArthurBandaryk/dev-tools/check-code-style@main
