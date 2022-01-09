@@ -1,3 +1,3 @@
 int main() {
-  int a = 290;
+    int a = 290;
 }

@@ -21,3 +21,5 @@ jobs:
       # is in `3rdparty/dev-tools/check-code-style` submodule's
       # directory.
       - uses: ArthurBandaryk/dev-tools/check-code-style@main
+        with:
+          clang-format-version: '12'
