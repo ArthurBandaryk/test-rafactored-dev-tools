@@ -10,7 +10,12 @@ on:
 
 jobs:
   check_code_style:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
+    #runs-on: ${{ matrix.os }}
+    #strategy:
+    #  matrix:
+    #    os: [ubuntu-latest]
+    #    version: [12]
     steps:
       - uses: actions/checkout@v2
         with:
